@@ -11,5 +11,15 @@ namespace G26W06WFCounter {
             //labelCount.Text = (++count).ToString();
             //labelCount.Text = "" + ++count;
         }
+
+        private void onSub(object sender, EventArgs e) {
+            if (count > 0)
+                labelCount.Text = $"{--count}";
+        }
+
+        private void onReset(object sender, EventArgs e) {
+            count = 0;
+            labelCount.Text = "0";
+        }
     }
 }

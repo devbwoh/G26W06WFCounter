@@ -26,10 +26,11 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             labelCount = new Label();
             btnAdd = new Button();
+            btnSub = new Button();
+            btnReset = new Button();
             SuspendLayout();
             // 
             // labelCount
@@ -53,11 +54,33 @@
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += OnAdd;
             // 
+            // btnSub
+            // 
+            btnSub.Location = new Point(12, 232);
+            btnSub.Name = "btnSub";
+            btnSub.Size = new Size(181, 36);
+            btnSub.TabIndex = 2;
+            btnSub.Text = "감소";
+            btnSub.UseVisualStyleBackColor = true;
+            btnSub.Click += onSub;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(199, 232);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(53, 36);
+            btnReset.TabIndex = 3;
+            btnReset.Text = "초기화";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += onReset;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(264, 238);
+            ClientSize = new Size(264, 280);
+            Controls.Add(btnReset);
+            Controls.Add(btnSub);
             Controls.Add(btnAdd);
             Controls.Add(labelCount);
             Margin = new Padding(2);
@@ -70,5 +93,7 @@
 
         private Label labelCount;
         private Button btnAdd;
+        private Button btnSub;
+        private Button btnReset;
     }
 }
